@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>inscription </title>
+	<style>
+        body {
+   background-image: url("pexels-juan-mendez-1536619.jpg");
+}
+label{
+    position: absolute;
+    right: 62%;
+}
+input {
+    position: absolute;
+    right: 50%;
+    
+}
+#bb {
+    background-color: lightsalmon;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#bb:hover{
+    background-color: white;
+    color: darkorange;
+}
+    </style>
+</head>
+
+<body>
+    <img src="fashion-logo-clothes-hanger-logo-letter-m-logo-tailor-emblem-wardrobe-icon-design-free-vector.webp" height="80px" width="100px" style="top: 10px; left: 10px;">
+
+	<form name="f"  action="formul.php"  method="post">
+		<label>Mail</label>
+		<input id="mail" type="text" name="mail">
+        <br>
+		<label>Password</label>
+		<input id="password" type="password" name="password">
+        <br>
+	
+		 <input id="bb" type="button" onclick="valid()" value="log in">
+         <p style="text-align: center; margin-top: 40px;">no account ? sign up here : <a href="Untitled-2.html" style="text-decoration: none; color: white; background-color: lightsalmon;">sign up</a></p>
+
+	</form>

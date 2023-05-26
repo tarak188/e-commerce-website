@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Inscription</title>
+<style>
+    
+body {
+   background-image: url("pexels-juan-mendez-1536619.jpg");
+}
+label{
+    position: absolute;
+    right: 62%;
+}
+input {
+    position: absolute;
+    right: 50%;
+    
+}
+#bb {
+    background-color: lightsalmon;
+    margin-top: 10px;
+    cursor: pointer;
+    border-radius: 20px;
+}
+#bb:hover{
+    background-color: white;
+    color: darkorange;
+}
+</style>
+</head>
+
+<body>
+    <img src="fashion-logo-clothes-hanger-logo-letter-m-logo-tailor-emblem-wardrobe-icon-design-free-vector.webp" height="80px" width="100px" style="top: 10px; left: 10px;">
+	<form name="f" action="formul.php" method="post">
+		<h4 style="text-align: center; color: white;" >Create account</h4>
+		<hr>
+		<div class="name-field">
+			
+				<label>Name :</label>
+				<input id="name1" type="text" name="name1">
+			
+            <br>
+		
+				<label>Last Name :</label>
+				<input id="name2" type="text" name="name2">
+			
+                <br>
+
+		<label>Mail</label>
+		<input id="mail" type="text" name="mail">
+        <br>
+
+		<label>Password :</label>
+        
+		<input id="password" type="password" name="password">
+        <br>
+
+		<label>Confirm Password :</label>
+		<input id="cpassword" type="password" name="cpassword">
+        <br>
+
+		<input id="bb" type="button" onclick="valid()" value="Sign up">
+		<p style="position: absolute; top: 280px; right: 45%; "> Already have an account? <a href="connect.html" style="text-decoration: none; background-color: lightsalmon; color: white;">Log in</a></p>
+	</form>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+	<script>
+		function valid() {
+			let a = document.getElementById("name1").value;
+			let b = document.getElementById("name2").value;
+			let c = document.getElementById("mail").value;
+			let d = document.getElementById("password").value;
+			let j = document.getElementById("cpassword").value;
+
+			if (a === "" || b === "" || c === "" || d === "" || j === "") {
+				Swal.fire({
+					title: "Veillez saisir tous les champs",
+					icon: "error",
+					timer: 2000,
+					timerProgressBar: true,
+					showConfirmButton: false
+				});
+			} else if (!c.includes("@")) {
+				Swal.fire({
+					title: "Le mail doit contenir @",
+					icon: "error",
+					timer: 2000,
+					timerProgressBar: true,
+					showConfirmButton: false
+				});
+			} else if (j !== d) {
+				Swal.fire({
+					title: "Mot de passe et sa confirmation doivent être les mêmes",
+					icon: "error",
+					timer: 2000,
+					timerProgressBar: true,
+					showConfirmButton: false
+				});
+			}
+		}
+	</script>
+</body>
+
+</html>
